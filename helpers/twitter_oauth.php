@@ -18,11 +18,7 @@ class Twitter_OAuth extends KISS_OAuth_v1 {
 	}
 	
 	function save( $response ){
-		
-		// erase the existing cache
-		$twitter = new Twitter();
-		$twitter->deleteCache();
-		
+		//...
 		// save to the user session 
 		$_SESSION['oauth']['twitter'] = $response;
 		

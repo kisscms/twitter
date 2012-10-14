@@ -27,22 +27,11 @@ class Twitter {
 		// check cache before....
 		//...
 		
-		if( $this->creds['access_token'] ) {
-			// add access_token
-			$params['access_token'] = $this->creds['access_token'];
-		} else {
-			// add secret
-			//$params['access_token'] = $this->creds['access_token'];
-		}
+		$url = $this->api . $service .".json";
 		
-		$url = $this->api . $service;
+		$results = $this->oauth->request($url, 'GET', $params);
 		
-		$http = new Http();
-		$http->setMethod('GET');
-		$http->setParams( $params );
-		$http->execute( $url );
-		
-		return ($http->error) ? die($http->error) : json_decode( $http->result);
+		return json_decode( $results );
 		
 	}
 	

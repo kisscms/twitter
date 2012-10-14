@@ -21,7 +21,25 @@ class Twitter {
 		$this->cache = $this->getCache();
 	}
 	
+	// REST methods
+	function  get() {
+		
+	}
 	
+	
+	function  post() {
+		
+	}
+	
+	function  put() {
+		
+	}
+	
+	function  delete() {
+		
+	}
 	
 	
 }
+
+?>

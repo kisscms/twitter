@@ -16,8 +16,8 @@ class Twitter {
 	 	$this->secret = $GLOBALS['config']['twitter']['secret'];
 		$this->me = ( empty($_SESSION['access']['twitter']['user_id']) ) ? false : $_SESSION['access']['twitter']['user_id'];
 	 	$this->token = ( empty($_SESSION['access']['twitter']['access_token']) ) ? false : $_SESSION['access']['twitter']['access_token'];
-	 	$this->api = "https://twitter.com/api/3.0/";
-		$this->oauth = "https://twitter.com/api/oauth/2.0/";
+	 	$this->api = "https://api.twitter.com/1.1/";
+		$this->oauth = "https://api.twitter.com/oauth/";
 		$this->cache = $this->getCache();
 	}
 	

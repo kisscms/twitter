@@ -1,8 +1,11 @@
 <?php
 // FIX - to include the base OAuth lib not in alphabetical order
-require_once( APP . "plugins/oauth/helpers/kiss_oauth.php" );
+//require_once( APP . "plugins/oauth/helpers/kiss_oauth.php" );
+$oauth = getPath("oauth/helpers/kiss_oauth.php");
+if( $oauth === false) exit("Missing dependency: OAuth plugin ( http://github.com/kisscms/oauth )");
+require_once( $oauth );
 
-/* Discus for KISSCMS */
+/* Twitter for KISSCMS */
 class Twitter_OAuth extends KISS_OAuth_v1 {
 	
 	function  __construct( $api="twitter", $url="https://api.twitter.com/oauth" ) {

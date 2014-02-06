@@ -2,6 +2,7 @@
 /* Twitter for KISSCMS */
 class Twitter {
 
+	public $name = "twitter";
 	private $api;
 	private $oauth;
 	private $config;
